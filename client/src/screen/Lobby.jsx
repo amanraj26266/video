@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { useSocket } from '../context/SocketProvider';
 import { Navigate, useNavigate } from "react-router-dom";
+import '../App.css';
 
 const LobbyScreen = () => {
 
@@ -30,8 +31,8 @@ const LobbyScreen = () => {
   }, [socket, handleJoinRoom]);
 
   return (
-    <>
-      <h3>LobbyScreen </h3>
+    <div className='Lobby'>
+      <h1 className='head'>LobbyScreen </h1>
       <form onSubmit={handleSubmitForm}>
         <label htmlFor="email"> Email Id : </label>
         <input type="email" id='email' value={email} onChange={(e) => setEmail(e.target.value)} /><br />
@@ -39,7 +40,7 @@ const LobbyScreen = () => {
         <input type="text" id='room' value={room} onChange={(e) => setRoom(e.target.value)} /><br />
         <button>Join</button>
       </form>
-    </>
+    </div>
 
 
   )

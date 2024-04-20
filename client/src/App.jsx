@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <h2> This is VideoCalling Application</h2>
+      <h1> This is VideoCalling Application</h1>
       <Routes>
         <Route path='/' element={<LobbyScreen />} />
         <Route path='/room/:roomId' element={<RoomPage />} />
